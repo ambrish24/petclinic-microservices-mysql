@@ -63,6 +63,7 @@ class OwnerResource {
     /**
      * Read List of Owners
      */
+    //http://localhost:51744/owners     //Check the exact port from Eureka Dashboard
     @GetMapping
     public List<Owner> findAll() {
         return ownerRepository.findAll();

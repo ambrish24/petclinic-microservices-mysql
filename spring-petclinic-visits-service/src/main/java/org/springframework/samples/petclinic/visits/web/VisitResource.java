@@ -51,6 +51,7 @@ public class VisitResource {
         visitRepository.save(visit);
     }
 
+    // http://localhost:51821/owners/*/pets/7/visits      //Check the exact port from Eureka Dashboard
     @GetMapping("owners/*/pets/{petId}/visits")
     public List<Visit> visits(@PathVariable("petId") int petId) {
         return visitRepository.findByPetId(petId);

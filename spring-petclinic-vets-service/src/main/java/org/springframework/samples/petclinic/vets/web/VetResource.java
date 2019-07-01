@@ -39,6 +39,7 @@ class VetResource {
 
     private final VetRepository vetRepository;
 
+    //http://localhost:51784/vets         //Check the exact port from Eureka Dashboard
     @GetMapping
     public List<Vet> showResourcesVetList() {
         return vetRepository.findAll();
