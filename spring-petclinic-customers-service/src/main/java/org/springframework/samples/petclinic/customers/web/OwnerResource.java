@@ -40,7 +40,7 @@ import java.util.List;
 @Slf4j
 class OwnerResource {
 
-    private final OwnerRepository ownerRepository;
+    private OwnerRepository ownerRepository;
 
     /**
      * Create Owner
@@ -82,7 +82,6 @@ class OwnerResource {
         ownerModel.setCity(ownerRequest.getCity());
         ownerModel.setAddress(ownerRequest.getAddress());
         ownerModel.setTelephone(ownerRequest.getTelephone());
-        log.info("Saving owner {}", ownerModel);
         return ownerRepository.save(ownerModel);
     }
 }

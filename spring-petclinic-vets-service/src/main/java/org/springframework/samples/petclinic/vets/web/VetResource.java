@@ -37,7 +37,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 class VetResource {
 
-    private final VetRepository vetRepository;
+    private VetRepository vetRepository;
 
     //http://localhost:51784/vets         //Check the exact port from Eureka Dashboard
     @GetMapping
